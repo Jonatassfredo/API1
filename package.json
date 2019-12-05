@@ -1,0 +1,22 @@
+{
+  "name": "apiwooshv1",
+  "version": "1.0.0",
+  "description": "API Plataforma Woosh versão 1.",
+  "main": "server.js",
+  "bin": {
+    "apiwooshv1": "express.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Jônatas Sfredo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.2.1",
+    "mongoose": "^5.7.13",
+    "nodemon": "^2.0.1"
+  }
+}
