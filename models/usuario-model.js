@@ -4,43 +4,20 @@ const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
 const usuarioModel = new schema({
-    nome: {
-        type: String,
-        required: true,
-        trim: true,
-        index: true
-    },
-    email: {
-        type: String,
-        required: true
-    },
-    telefone: {
-        type: Number
-    },
-    cpf: {
-        type: String,
-        required: true,
-        default: "00000000000"
-    },
-    senha: {
-        type: String,
-        required: true
-    },
-    foto: {
-        type: String
-    },
-    ativo: {
-        type: Boolean,
-        required: true,
-        default: true
-    },
-    dataCriacao: {
-        type: Date,
-        default: Date.now
-    }
-}, {
-    versionKey: false
-});
+    nome: { type: String, required: [true, 'campo obrigatório'], uppercase: true, trim: true },
+    cpf: { type: String, unique: true, minlength: 11, maxlength: 11, trim: true },
+    cnpj: { type: String, unique: true, minlength: 14, maxlength: 14, trim: true },
+    senha: { type: String, required: [true, 'campo obrigatório'] },
+    email: { type: String, unique: true, lowercase: true, trim: true },
+    telefone: { type: String },
+    avatar: { type: String },
+    token: { type: String },
+    dataNascimento: { type: Date },
+    ativo: { type: Boolean, required: [true, 'campo obrigatório'], default: true },
+    dataCriacao: { type: Date, default: Date.now }
+},
+    { versionKey: false },
+    { timestamps: true });
 
 usuarioModel.pre('save', next => {
     let agora = new Date();
@@ -49,4 +26,4 @@ usuarioModel.pre('save', next => {
     next();
 });
 
-module.exports = mongoose.model('Usuario', usuarioModel);
+module.exports = mongoose.model('usuario', usuarioModel);
