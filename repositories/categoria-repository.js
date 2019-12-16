@@ -4,7 +4,7 @@ const base = require('../bin/base/repository-base');
 class categoriaRepository {
 
     constructor() {
-        this._base = new base('Categoria');
+        this._base = new base('categoria');
     }
 
     async create(data) {
