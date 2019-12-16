@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
 const enderecoModel = new schema({
-    usuarioId: { type: schema.Types.ObjectId, ref: 'usuario' },
+    idUsuario: { type: schema.Types.ObjectId, ref: 'usuario', required: [true, 'campo obrigatório'] },
     pontoReferencia: { type: String },
     orientacoes: { type: String },
     idCidade: { type: schema.Types.ObjectId, ref: 'cidade', required: [true, 'campo obrigatório'] },
@@ -13,7 +13,7 @@ const enderecoModel = new schema({
     estado: { type: String, required: [true, 'campo obrigatório'], uppercase: true, trim: true },
     idBairro: { type: schema.Types.ObjectId, ref: 'bairro', required: [true, 'campo obrigatório'] },
     bairro: { type: String, required: [true, 'campo obrigatório'] },
-    rua: { type: String },
+    rua: { type: String, required: [true, 'campo obrigatório'] },
     ativo: { type: Boolean, required: [true, 'campo obrigatório'], default: true },
     dataCriacao: { type: Date, default: Date.now }
 },

@@ -15,9 +15,9 @@ class pedidoRepository {
         return await this._base.update(id, data);
     }
 
-    async getAll(_usuarioId) {
+    async getAll(_idUsuario) {
         return await this._base._model.find({
-            usuarioId: _usuarioId
+            idUsuario: _idUsuario
         });
     }
 

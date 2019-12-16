@@ -17,7 +17,7 @@ pedidoController.prototype.post = async (req, res) => {
     _validationContract.isRequired(req.body.enderecoEntregaId, 'Informe o Endereço de Entrega do seu pedido');
 
     //pega o id do usuário e joga no pedido
-    req.body.usuarioId = req.usuarioLogado.user._id;
+    req.body.idUsuario = req.usuarioLogado.user._id;
     //pega o id do operador e joga no pedido
     // req.body.operadorId = req.operadorLogado.user._id;
 

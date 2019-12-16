@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
 const pedidoModel = new schema({
-    usuarioId: {
+    idUsuario: {
         type: schema.Types.ObjectId,
         ref: 'Usuario'
     },

@@ -15,9 +15,9 @@ class enderecoEntregaRepository {
         return await this._base.update(id, data);
     }
 
-    async getAll(_usuarioId) {
+    async getAll(_idUsuario) {
         return await this._base._model.find({
-            usuarioId: _usuarioId
+            idUsuario: _idUsuario
         });
     }
 
@@ -25,9 +25,9 @@ class enderecoEntregaRepository {
         return await this._base.getById(id);
     }
 
-    async getByUsuarioId(id) {
+    async getByIdUsuario(id) {
         return await this._base._model.find({
-            usuarioId: id
+            idUsuario: id
         });
     }
 
@@ -37,9 +37,9 @@ class enderecoEntregaRepository {
         });
     }
 
-    async getByUsuarioId(id) {
+    async getByIdUsuario(id) {
         return await this._base._model.find({
-            usuarioId: id
+            idUsuario: id
         });
     }
 
