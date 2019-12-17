@@ -10,7 +10,7 @@ const adicionalModel = new schema({
     produto: { type: String, required: [true, 'campo obrigatório'], uppercase: true },
     valor: { type: String, required: [true, 'campo obrigatório'] },
     nome: { type: String, required: [true, 'campo obrigatório'] },
-    descricao: { type: String, required: [true, 'campo obrigatório'] },
+    descricao: { type: String },
     ativo: { type: Boolean, required: [true, 'campo obrigatório'], default: true },
     dataCriacao: { type: Date, default: Date.now }
 },

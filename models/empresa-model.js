@@ -18,6 +18,7 @@ const empresaModel = new schema({
     descricao: { type: String },
     email: { type: String, unique: true, lowercase: true, trim: true },
     telefone: { type: String },
+    formaPagamento: { type: String },
     avatar: { type: String },
     token: { type: String },
     realizaEntrega: { type: Boolean, required: [true, 'campo obrigatório'] },
