@@ -8,7 +8,7 @@ const auth = require('../middlewares/authenctication');
 let _ctrl = new controller();
 
 router.get('/', auth, _ctrl.get);
-router.get('/getAll', auth, _ctrl.getAll);
+router.get('/getByUser', auth, _ctrl.getByUser);
 router.get('/:id', auth, _ctrl.getById);
 router.post('/', auth, _ctrl.post);
 router.put('/:id', auth, _ctrl.put);

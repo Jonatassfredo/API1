@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/operador-controller');
+const controller = require('../controllers/administrador-controller');
 const auth = require('../middlewares/authenctication');
 
 let _ctrl = new controller();

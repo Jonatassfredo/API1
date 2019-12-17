@@ -13,8 +13,6 @@ app.use(function (req, res, next) {
     res.setHeader("Access-Control-Allow-Headers", "*");
     res.setHeader("Content-Type", "application/json");
     res.setHeader("Access-Control-Allow-Credentials", true);
-    //res.setHeader("Access-Control-Allow-Headers", "content-type");
-    //res.setHeader("x-access-token", true);
     next();
 });
 

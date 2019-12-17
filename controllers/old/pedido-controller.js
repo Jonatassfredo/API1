@@ -25,15 +25,13 @@ pedidoController.prototype.post = async (req, res) => {
 };
 
 pedidoController.prototype.get = async (req, res) => {
-    let result = await _repo.getAll(req.usuarioLogado.user._id);
+    let result = await _repo.getAllPedidos(req, res);
     res.status(200).send(result);
 };
 
-pedidoController.prototype.getAll = async (req, res) => {
-    let result = await _repo.getAllPedidos(req, res);
+pedidoController.prototype.getByUser = async (req, res) => {
+    let result = await _repo.getAll(req.usuarioLogado.user._id);
     res.status(200).send(result);
-
-    // ctrlBase.get(_repo, req, res);
 };
 
 pedidoController.prototype.getById = async (req, res) => {
