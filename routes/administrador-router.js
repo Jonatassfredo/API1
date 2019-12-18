@@ -7,9 +7,6 @@ const auth = require('../middlewares/authenctication');
 
 let _ctrl = new controller();
 
-//Public access
-router.post('/autenticar', _ctrl.autenticar);
-
 router.get('/', auth, _ctrl.get);
 router.get('/:id', auth, _ctrl.getById);
 router.post('/', auth, _ctrl.post);
