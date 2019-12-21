@@ -42,7 +42,7 @@ const produtoRouter = require("../routes/produto-router");
 const usuarioRouter = require("../routes/usuario-router");
 const pedidoRouter = require("../routes/pedido-router");
 const operadorRouter = require("../routes/operador-router");
-const enderecoEntregaRouter = require("../routes/endereco-entrega-router");
+const enderecoEntregaRouter = require("../routes/endereco-router");
 
 //Configurando as rotas
 app.use("/api/categoria", categoriaRouter);

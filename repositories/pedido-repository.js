@@ -1,10 +1,10 @@
-require('../models/produto-model');
+require('../models/pedido-model');
 const base = require('../bin/base/repository-base');
 
-class produtoRepository {
+class pedidoRepository {
 
     constructor() {
-        this._base = new base('Produto');
+        this._base = new base('pedido');
     }
 
     async create(data) {
@@ -15,15 +15,18 @@ class produtoRepository {
         return await this._base.update(id, data);
     }
 
-    async getAll() {
-        return await this._base._model.find().populate('categoriaId', '_id titulo');
+    async getAll(_idUsuario) {
+        return this._base._model.find({
+            idUsuario: _idUsuario
+        })
+    }
+
+    async getAllPedidos() {
+        return await this._base.getAll();
     }
 
     async getById(id) {
         return await this._base.getById(id);
-    }
-    async getByCategoriaId(id) {
-        return await this._base._model.find({ categoriaId: id });
     }
 
     async delete(id) {
@@ -32,4 +35,4 @@ class produtoRepository {
 
 }
 
-module.exports = produtoRepository;
+module.exports = pedidoRepository;

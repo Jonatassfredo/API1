@@ -9,7 +9,7 @@ let _ctrl = new controller();
 
 router.get('/', auth, _ctrl.get);
 router.get('/:id', auth, _ctrl.getById);
-router.get('/cliente/', auth, _ctrl.getByCliente);
+router.get('/cliente/', auth, _ctrl.getById);
 router.get('/cliente/:id', auth, _ctrl.getById);
 router.post('/', auth, _ctrl.post);
 router.put('/:id', auth, _ctrl.put);

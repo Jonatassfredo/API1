@@ -5,7 +5,7 @@ const md5 = require('md5');
 class operadorRepository {
 
     constructor() {
-        this._base = new base('Operador');
+        this._base = new base('operador');
         this._projection = 'nome';
     }
 

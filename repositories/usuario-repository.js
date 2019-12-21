@@ -5,7 +5,7 @@ const md5 = require('md5');
 class usuarioRepository {
 
     constructor() {
-        this._base = new base('Usuario');
+        this._base = new base('usuario');
         this._projection = 'nome email cpf _id telefone ativo dataCriacao';
     }
 

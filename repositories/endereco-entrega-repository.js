@@ -3,7 +3,7 @@ const base = require("../bin/base/repository-base");
 
 class enderecoEntregaRepository {
   constructor() {
-    this._base = new base("EnderecoEntrega");
+    this._base = new base("endereco");
   }
 
   async create(data) {
