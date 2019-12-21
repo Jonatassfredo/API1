@@ -14,11 +14,7 @@ class operadorRepository {
             nome: Nome
         }, this._projection);
     }
-    // async IsCpfExite(Cpf) {
-    //     return await this._base._model.findOne({
-    //         cpf: Cpf
-    //     }, this._projection);
-    // }
+
     async authenticate(Nome, Senha) {
         let _hashSenha = md5(Senha);
         return await this._base._model.findOne({

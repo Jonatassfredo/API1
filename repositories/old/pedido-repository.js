@@ -16,9 +16,9 @@ class pedidoRepository {
     }
 
     async getAll(_idUsuario) {
-        return await this._base._model.find({
+        return this._base._model.find({
             idUsuario: _idUsuario
-        });
+        })
     }
 
     async getAllPedidos() {

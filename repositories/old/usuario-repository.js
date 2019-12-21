@@ -49,7 +49,7 @@ class usuarioRepository {
     }
 
     async getById(id) {
-        return await this._base._model.findById(id, 'nome email cpf _id foto');
+        return await this._base._model.findById(id, this._projection);
     }
 
     async delete(id) {
