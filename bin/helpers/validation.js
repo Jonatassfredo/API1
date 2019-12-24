@@ -64,6 +64,9 @@ class ValidationContract {
     isValid() {
         return this._errors.length == 0;
     }
+
+    isCpf() { }
+    isCnpj() { }
 }
 
 module.exports = ValidationContract;
